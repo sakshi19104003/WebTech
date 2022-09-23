@@ -74,6 +74,7 @@ public class Assignment2 {
         System.out.println("----------------- Question 4 --------------------");
         int population = 80000;
         int years = 0;
+        System.out.println("Population at initial stage is : "+population);
         while(population<150000){
             population += 0.05*population;
             years++;
