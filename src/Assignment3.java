@@ -215,10 +215,11 @@ public class Assignment3 {
 
         //q3 program to sort strings(using library function)
         System.out.println("-----Question 3-----");
-        String str[] = {"Java","Web","Technology","Development","Php","Object","Class"};
-        System.out.println(Arrays.toString(str));
-        Arrays.sort(str);
-        System.out.println(Arrays.toString(str));
+        String str = "sakshi singhal 19104003 pec";
+        System.out.println(str);
+        char temp[] = str.toCharArray();// string is changed to Char Array
+        Arrays.sort(temp); // Sorting the char array
+        System.out.println(new String(temp));
 
         //q4 display Hailstone sequence for a number n
         System.out.println("-----Question 4-----");
