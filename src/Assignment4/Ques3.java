@@ -102,7 +102,7 @@ public class Ques3 {
     public static void main(String[] args) {
 
         Ques3 number = new Ques3( );
-        System.out.println(" The given number is : " + Ques.number);
+        System.out.println(" The given number is : " + Ques3.number);
         number.dispBinary();
         System.out.println ("isZero: " + number.isZero() );
         System.out.println ("isPositive: " + number.isPositive());
