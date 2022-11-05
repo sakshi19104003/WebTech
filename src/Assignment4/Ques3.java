@@ -2,92 +2,70 @@ package Assignment4;
 
 public class Ques3 {
 
-    private double db1;
-    private long lg;
-    public Ques3 ( )
+    
+    private static double number;
+    public  Ques3 ( )
     {
-        db1 = 108.0d;
-        lg = 249;
+        number = 123.0d;
     }
-    public Ques3(double d, long l)
-    {
-        db1 = d;
-        lg = 1;
-    }
+
     public boolean isZero ( )
     {
-        if (db1 == 0.0)
-            return true;
-        else
-            return false;
+        return number == 0.0;
     }
     public boolean isPositive ( )
     {
-        if(db1 > 0.0)
-            return true;
-        else
-            return false;
+        return number > 0.0;
     }
     public boolean isNegative ( )
     {
-        if (db1 < 0.0)
-            return true ;
-        else
-            return false;
+        return number < 0.0;
     }
     public boolean isodd( )
     {
-        if (db1 % 2 != 0.0)
-            return true;
-        else return false;
+        return number % 2 != 0.0;
     }
     public boolean isEven ( )
     {
-        if (db1 % 2 == 0.0)
-            return true ;
-        else return false;
+        return number % 2 == 0.0;
     }
     public boolean isPrime ( )
     {
-        int i, lastn;
+        int i, lastnum;
 
         double a;
         boolean flag;
-        a = Math.sqrt(lg);
-        lastn = (int)a;
+        a = Math.sqrt(number);
+        lastnum = (int)a;
         flag = true;
-        for (i=2; i<lastn; i++)
+        for (i=2; i<lastnum; i++)
         {
-            if (lg != i)
+            if (number != i)
             {
-                if( lg % i ==0)
+                if( number % i ==0)
                 {
                     flag = false;
                     break;
                 }
             }
         }
-        if (flag)
-            return true;
-        else return false;
+        return flag;
     }
     public boolean isAmstrong ( )
     {
-        if (db1 == 0.0)
-            return true;
-        else return false;
+        return number == 0.0;
     }
     public double getFactorial ( )
     {
         double d=1;
-        for(int i = 1;i <lg; i++)
+        for(int i = 1; i < number; i++)
             d *=i;
         return d;
     }
     public double getSqrt ( )
     {
         double d;
-        d = (double) lg;
+        d = (double) number;
         d= Math.sqrt(d);
         return d;
     }
@@ -95,46 +73,49 @@ public class Ques3 {
     {
         double d =0;
         double temp;
-        while (lg>9)
+        int db = (int) number;
+        while (db >9)
         {
-            temp = lg%10;
+            temp = db %10;
             d = d * 10 + temp;
-            lg = lg/10;
+            db = db /10;
         }
-        d = d * 10 +lg;
+        d = d * 10 + db;
         return d;
     }
     public double sumDigits( )
     {
         double d=0;
-        while( lg>9)
+         int n = (int) number;
+        while( n >9)
         {
-            d += lg % 10;
-            lg = lg/10;
+            d += n % 10;
+            n = n /10;
         }
-        d +=lg;
+        d += n;
         return d;
     }
     public void dispBinary ( )
     {
-        System.out.println("ByteValue of lg :" + Long.toBinaryString(lg));
+        System.out.println("ByteValue :" + Long.toBinaryString((long) number));
     }
-    public static void main (String args [ ])
-    {
-        Ques3 mynum = new Ques3( );
-        double d = 199;
-        System.out.println(" The given numbers are 108.0d and 249");
-        mynum.dispBinary();
-        System.out.println ("isZero " + mynum.isZero() );
-        System.out.println ("isPositive " + mynum. isPositive());
-        System.out.println ("isNegative " + mynum.isNegative() );
-        System.out.println ("isOdd " + mynum.isodd());
-        System.out.println ("isEven " + mynum.isEven());
-        System.out.println ("isPrime " +mynum.isPrime());
-        System.out.println ("isAmstrong " +mynum.isAmstrong());
-        System.out.println ("getFactorial " + mynum.getFactorial());
-        System.out.println ("getSqrt " + mynum. getSqrt( ));
-        System.out.println ("sumDigits " + mynum.sumDigits( ));
+    public static void main(String[] args) {
+
+        Ques3 number = new Ques3( );
+        System.out.println(" The given number is : " + Ques.number);
+        number.dispBinary();
+        System.out.println ("isZero: " + number.isZero() );
+        System.out.println ("isPositive: " + number.isPositive());
+        System.out.println ("isNegative: " + number.isNegative() );
+        System.out.println ("isOdd: " + number.isodd());
+        System.out.println ("isEven: " + number.isEven());
+        System.out.println ("isPrime: " +number.isPrime());
+        System.out.println ("isAmstrong: " +number.isAmstrong());
+        System.out.println ("getFactorial: " + number.getFactorial());
+        System.out.println ("getSqrt: " + number.getSqrt( ));
+        System.out.println("getReverse:  " + number.getReverse());
+        System.out.println ("sumDigits: " + number.sumDigits( ));
+
     }
 }
 
