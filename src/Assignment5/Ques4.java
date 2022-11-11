@@ -7,9 +7,9 @@ public class Ques4 {
     Ques4() {
         a++;
     }
-    void m1() {
+    void m1() { // Insted of "Void" it is "void" 
         a++;
-        System.out.println(a);
+        System.out.println(a); //made a change instead of colon, semicolon is there
     }
     public static void main(String[] args)
     {
